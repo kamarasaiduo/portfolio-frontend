@@ -22,7 +22,7 @@ export default function OAuthCallback() {
             }
         } else {
             // Fallback: try to fetch from /api/oauth/success
-            fetch('/api/oauth/success', {
+            fetch('https://portfolio-backend-m2je.onrender.com/api/oauth/success', {
                 credentials: 'include'
             })
             .then(response => response.json())

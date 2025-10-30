@@ -1,0 +1,6 @@
+# Backend API URL
+REACT_APP_API_URL=https://portfolio-backend-m2je.onrender.com
+
+# Optional: You can also add these for different environments
+REACT_APP_ENVIRONMENT=production
+REACT_APP_VERSION=1.0.0

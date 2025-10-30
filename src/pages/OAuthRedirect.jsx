@@ -25,7 +25,7 @@ export default function OAuthRedirect() {
         try {
             setStatus('Fetching user information...');
             
-            const response = await fetch('http://localhost:8080/api/oauth/success', {
+            const response = await fetch('https://portfolio-backend-m2je.onrender.com/api/oauth/success', {
                 method: 'GET',
                 credentials: 'include',
                 headers: {

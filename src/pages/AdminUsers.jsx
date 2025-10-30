@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 
@@ -23,7 +22,7 @@ export default function AdminUsers() {
       setError("");
       
       const token = localStorage.getItem('token');
-      const response = await fetch("http://localhost:8080/api/users", {
+      const response = await fetch("https://portfolio-backend-m2je.onrender.com/api/users", {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
@@ -78,8 +77,8 @@ export default function AdminUsers() {
     e.preventDefault();
     try {
       const url = editingUser 
-        ? `http://localhost:8080/api/users/${editingUser.id}`
-        : "http://localhost:8080/api/users";
+        ? `https://portfolio-backend-m2je.onrender.com/api/users/${editingUser.id}`
+        : "https://portfolio-backend-m2je.onrender.com/api/users";
       
       const method = editingUser ? "PUT" : "POST";
       
@@ -117,7 +116,7 @@ export default function AdminUsers() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8080/api/users/${userId}`, {
+      const response = await fetch(`https://portfolio-backend-m2je.onrender.com/api/users/${userId}`, {
         method: "DELETE",
         headers: {
           'Authorization': `Bearer ${token}`

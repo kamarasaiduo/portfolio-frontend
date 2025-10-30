@@ -40,7 +40,7 @@ export default function ResetPassword() {
         setLoading(true);
 
         try {
-            const response = await fetch("http://localhost:8080/api/auth/reset-password", {
+            const response = await fetch("https://portfolio-backend-m2je.onrender.com/api/auth/reset-password", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -25,7 +25,7 @@ export default function EmailVerification() {
 
     const verifyEmail = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/api/auth/verify?token=${token}`, {
+            const response = await fetch(`https://portfolio-backend-m2je.onrender.com/api/auth/verify?token=${token}`, {
                 method: 'GET',
                 headers: { 'Accept': 'application/json' },
             });

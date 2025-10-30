@@ -1,5 +1,5 @@
 // Use your live backend URL
-const API_BASE_URL = 'https://portfolio-backend-m2je.onrender.com';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://portfolio-backend-m2je.onrender.com';
 
 // Helper function to get auth token
 const getAuthToken = () => {
@@ -54,7 +54,7 @@ export const authAPI = {
       if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
         return {
           success: false,
-          error: 'Cannot connect to the server. Please make sure the backend is running on port 8080.'
+          error: 'Cannot connect to the server. Please make sure the backend is running.'
         };
       }
       
@@ -112,7 +112,7 @@ export const authAPI = {
       if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
         return {
           success: false,
-          error: 'Cannot connect to the server. Please make sure the backend is running on port 8080.'
+          error: 'Cannot connect to the server. Please make sure the backend is running.'
         };
       }
       
