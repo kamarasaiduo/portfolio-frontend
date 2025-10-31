@@ -317,13 +317,8 @@ export default function Register() {
                                 src="/login.jpg" 
                                 alt="image login" 
                                 className="max-w-full max-h-full object-contain dark:brightness-90 transition-all"
-
-
                             />
                         </div>
-                        
-                                      
-                     
                     </div>
                 </div>
             </div>

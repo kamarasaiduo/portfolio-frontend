@@ -92,7 +92,7 @@ function Login() {
     const handleResendVerification = async () => {
         try {
             setLoading(true);
-            const response = await fetch("http://localhost:8080/api/auth/resend-verification", {
+            const response = await fetch("https://portfolio-backend-m2je.onrender.com/api/auth/resend-verification", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -124,7 +124,7 @@ function Login() {
 
         try {
             setLoading(true);
-            const response = await fetch("http://localhost:8080/api/auth/forgot-password", {
+            const response = await fetch("https://portfolio-backend-m2je.onrender.com/api/auth/forgot-password", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

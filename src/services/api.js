@@ -18,7 +18,7 @@ const getAuthHeaders = () => {
 export const authAPI = {
   register: async (userData) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/register`, {
+      const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export const authAPI = {
 
   login: async (email, password, rememberMe = false) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/login`, {
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ export const authAPI = {
   // Forgot password function
   forgotPassword: async (email) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/forgot-password`, {
+      const response = await fetch(`${API_BASE_URL}/api/auth/forgot-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ export const authAPI = {
   // Reset password function
   resetPassword: async (token, newPassword) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/reset-password`, {
+      const response = await fetch(`${API_BASE_URL}/api/auth/reset-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -189,7 +189,7 @@ export const authAPI = {
   // Resend verification function
   resendVerification: async (email) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/resend-verification`, {
+      const response = await fetch(`${API_BASE_URL}/api/auth/resend-verification`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -219,7 +219,7 @@ export const authAPI = {
   // Verify email function
   verifyEmail: async (token) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/verify?token=${token}`);
+      const response = await fetch(`${API_BASE_URL}/api/auth/verify?token=${token}`);
       const data = await response.json();
 
       if (response.ok && data.success) {
